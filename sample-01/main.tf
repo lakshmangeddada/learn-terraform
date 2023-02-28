@@ -12,6 +12,6 @@ resource "aws_instance" "ec2" {
   }
 }
 
-output "private_ip" {
+output "security_id" {
   value = "${var.security_group}"
 }
