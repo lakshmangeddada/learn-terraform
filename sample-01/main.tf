@@ -1,5 +1,5 @@
 variable "security_group" {
-  vpc_security_group_ids   = [ "sg-0615d2d6b16a84caa" ]
+  default   = [ "sg-0615d2d6b16a84caa" ]
 }
 
 
