@@ -24,3 +24,5 @@ resource "aws_instance" "ec2" {
 output "security_group_id" {
   value = "${var.security_group}"
 }
+
+
