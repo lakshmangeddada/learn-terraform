@@ -1,3 +1,3 @@
-output "test 1" {
+output "test1" {
   value = "Hello world"
 }
