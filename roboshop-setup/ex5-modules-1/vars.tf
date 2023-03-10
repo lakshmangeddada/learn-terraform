@@ -4,14 +4,14 @@ variable "instances" {
       name = "catalogue"
       type = "t3.micro"
     }
-    payment = {
-      name = "payment"
-      type = "t3.micro"
-    }
-    redis = {
-      name = "redis"
-      type = "t3.micro"
-    }
+#    payment = {
+#      name = "payment"
+#      type = "t3.micro"
+#    }
+#    redis = {
+#      name = "redis"
+#      type = "t3.micro"
+#    }
 #    frontend = {
 #      name = "frontend"
 #      type = "t3.micro"
