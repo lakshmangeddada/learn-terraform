@@ -17,3 +17,8 @@ module "route53" {
   component = each.value["name"]
   private_ip = module.ec2[each.value["name"]].private_ip
 }
+
+module "provisioner" {
+  source = "./provisioner"
+}
+
