@@ -5,14 +5,11 @@ data "aws_ami" "ami" {
 }
 
 
-resource "aws_instance" "frontend" {
+resource "aws_instance" "prometheus" {
   ami = data.aws_ami.ami.image_id
-  instance_type = "t3.micro"
+  instance_type = "t3.small"
   vpc_security_group_ids = [ "sg-0615d2d6b16a84caa" ]
   tags = {
-    Name = "frontend"
+    Name = "prometheus"
   }
 }
-
-
-variable "instances" {}
