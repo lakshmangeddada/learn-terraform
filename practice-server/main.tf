@@ -6,12 +6,12 @@ data "aws_ami" "ami" {
 
 
 resource "aws_instance" "instances" {
-  count = "var.instances"
+  count = var.instances
   ami = data.aws_ami.ami.image_id
-  instance_type = count.index["type"]
+  instance_type = count.index[type]
   vpc_security_group_ids = [ "sg-0615d2d6b16a84caa" ]
   tags = {
-    Name = count.index["name"]
+    Name = count.index[name]
   }
 }
-
+variable "instances" {}
