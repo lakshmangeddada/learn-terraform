@@ -13,3 +13,12 @@ resource "aws_instance" "frontend" {
     Name = "frontend"
   }
 }
+
+resource "aws_instance" "test1" {
+  ami = data.aws_ami.ami.image_id
+  instance_type = "t3.micro"
+  vpc_security_group_ids = [ "sg-0615d2d6b16a84caa" ]
+  tags = {
+    Name = "test1"
+  }
+}
