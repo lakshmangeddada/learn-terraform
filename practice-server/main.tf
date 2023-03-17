@@ -10,6 +10,6 @@ resource "aws_instance" "instances" {
   ami = data.aws_ami.ami.image_id
   instance_type = "count.index[type]"
   vpc_security_group_ids = [ "sg-0615d2d6b16a84caa" ]
-    Name = "count.index[name]"
+  Name = "count.index[name]"
 }
 
