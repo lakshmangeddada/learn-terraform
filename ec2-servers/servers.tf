@@ -13,3 +13,6 @@ resource "aws_instance" "frontend" {
     Name = "frontend"
   }
 }
+
+
+variable "instances" {}

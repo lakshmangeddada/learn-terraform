@@ -5,20 +5,13 @@ data "aws_ami" "ami" {
 }
 
 
-resource "aws_instance" "frontend" {
+resource "aws_instance" "instances" {
+  count = "var.instances"
   ami = data.aws_ami.ami.image_id
-  instance_type = "t3.micro"
+  instance_type = count.index["type"]
   vpc_security_group_ids = [ "sg-0615d2d6b16a84caa" ]
   tags = {
-    Name = "frontend"
+    Name = count.index["name"]
   }
 }
 
-resource "aws_instance" "test1" {
-  ami = data.aws_ami.ami.image_id
-  instance_type = "t3.micro"
-  vpc_security_group_ids = [ "sg-0615d2d6b16a84caa" ]
-  tags = {
-    Name = "test1"
-  }
-}
