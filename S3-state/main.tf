@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    name = "geddada-devops71"
+    bucket = "geddada-devops71"
     key    = "S3-state/terraform.tfstate"
     region = "us-east-1"
   }
